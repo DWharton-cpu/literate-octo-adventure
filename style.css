@@ -1,0 +1,358 @@
+/* Web Fonts -------------------- */
+
+@font-face {
+  font-family: 'Abolition Regular';
+
+  src: url('../fonts/abolition-regular-webfont.eot');
+  src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abolition-regular-webfont.woff') format('woff'),
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype')
+
+}
+
+/* eot = embetted opentype format (made for iE9 etc)
+woff = web  open font format (made by mozilla, accepted widely)
+ttf = true type format (for safari, ios and android)
+
+*/
+
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, 
+h2{
+  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;  
+}
+
+h1 {  
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0px 1px 5px #222;
+   /* x offset, y offset, blur, color */
+   margin: 12px 0 0;
+
+}
+     
+ 
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  padding-top: 170px;
+  height: 850px;
+  background: linear-gradient(#000, transparent 90%),
+              linear-gradient(0deg, #FFF, transparent),
+              #ffa949 url('../img/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg') no-repeat center;
+  background-size: cover;
+  
+  
+}
+
+/* 
+
+^^
+makes header fade into first primary content section 
+
+  background: linear-gradient(#ffa949, transparent 90%),
+              #ffa949 url('../img/mountains.jpg') no-repeat center;
+
+^^ makes linear gradient that is transparent enough to show the image 
+
+all values in parenthesis for gradients are color stops, their positions are defined as below:
+
+  background-image: linear-gradient(#ffa949 0%, firebrick 50%, dodgerblue 100%); the full color is at each percentage area and the browser evenly distributes it between the points
+
+*/
+    
+    /* gradient, top to bottom fade from orange to firebrick red
+    background-image: linear-gradient(#ffa949, firebrick) 
+    
+    (to top #ffa949, firebrick) reverses the order to bottom to top
+    
+    (to left #ffa949, firebrick) makes it start brick red from right and end in orange on the left)
+    
+    (0deg #ffa949, firebrick) allows it to just go top brick red to bottom orange; changing the degree value reflects acordingly - 90deg has a left to ride fade)
+    
+    radial-gradient(#ffa949, firebrick) will have it in a radial shape instead of side to side
+    
+    and linear-gradient(circle #ffa949, firebrick) makes it evenly spread out as a circle shape
+    
+    linear-gradient(circle at top #ffa949, firebrick) gives a spot light with gradient having orange at top center and fades out into firebrick red, top right will position it from top right corner
+    
+    */
+
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #000;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+  border-radius: 10px;
+}
+
+.wildlife {
+  color: white;
+  text-align: left;
+  background: #434a52 url url('../img/part1-tidal-plans-delicia-wharton.jpg') no-repeat center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 50px 10px #000;
+  border-radius: 10px;
+}
+
+.free {
+  border-radius: 20px;
+  border: 20px;
+  padding: 20px;
+  border-color: black;
+}
+    /*
+    the damn long way is
+    
+    border-top-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 10px;
+  
+  border-radius: 25px 100% (referring to dimensions) gives an eye looking shape; 50% gives a horizotal oval, and for a perfect circle you can put radius at 50% but with a set width and height value of 500pxx (or another size but equal height and width)
+    
+    /* 
+    
+   box-shadow: 0px 15px 20px -12px #000;
+  horizontal (x), vertical (y), blur value, spread, color */
+  
+  /* inset 0px 0px 50px 10px #000 for inside shadow on all sides */
+
+
+.arrow {
+  width: 50px;
+  margin-top: 300px;
+}
+
+/* Floated Columns ------------------ */
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: left;
+}
+
+.resorts {
+  float: right;
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+/* Media Queries -------------------- */
+
+@media (max-width: 1024px){
+  .primary-content, 
+  .secondary-content {
+    width: 90%;
+  }
+
+.wildlife {
+  padding: 10% 12%;
+  margin: 50px, 0px, 0px, 20px;
+}
+}
+
+@media (max-width: 760px) {
+
+ .primary-content, 
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
+
+  .main-header {
+  max-height: 380px;
+  padding: 50px, 25px, 0, 25px;
+  }
+
+  .title {
+   font-size: 1.3rem;
+    border: none;
+  }
+
+  h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  .arrow {
+  display: none;
+  }
+
+  .intro {
+  font-size: 1rem;
+}
+
+  .resorts, .tips {
+    float: none;
+    width: 100%;
+}
+
+.main-footer {
+  padding: 20px, 0, 0, 20px;
+}
+}
+
+/*
+@media (max-width: 960px) {
+  body {
+    background: royalblue;
+   }
+}
+
+@media (max-width: 800px) {
+  body {
+    background: darkred;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 700px;){
+  body {
+    background: seagreen;
+}
+  p {
+    color: white;
+  }
+
+}
+
+*/
+/* 
+the "and" combines 2 expressions
+the "all" is implied if you don't define a media type (a style block that changes what happens at diferent sizes. If it is true, it will happen on the designated size; if it isn't then the brower wont' show the change) */
+
+
+
+
+
